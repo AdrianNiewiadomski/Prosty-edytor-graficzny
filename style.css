@@ -5,9 +5,15 @@ html,body{
 }
 #opis{
     height:10%;
-    background-color:red;
+    /* background-color:red; */
 }
 #plansza{
     height:90%;
-    background-color:blue;
+    /* background-color:blue; */
+}
+.pole{
+    float:left;
+    width:10%;
+    height:10%;
+    background-color: grey;
 }
