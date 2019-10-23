@@ -1,0 +1,13 @@
+html,body{
+    margin:0;
+    height:100%;
+    width:100%;
+}
+#opis{
+    height:10%;
+    background-color:red;
+}
+#plansza{
+    height:90%;
+    background-color:blue;
+}
