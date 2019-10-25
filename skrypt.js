@@ -12,4 +12,8 @@ function inicjuj(){
         }
     }
     document.getElementById('plansza').innerHTML = html;
+
+    document.addEventListener("keydown",
+        function(){console.log(event);}
+    );
 }
