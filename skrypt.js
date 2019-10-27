@@ -41,6 +41,10 @@ function zmienKolor(event){
 
 function rysuj(nr){
     console.log(nr);
+    var wybranyDiv = document.getElementById(nr);
+    var att = document.createAttribute('style');
+    att.value = 'background-color: red';
+    wybranyDiv.setAttributeNode(att);
 }
 
 function inicjuj(){
@@ -50,7 +54,7 @@ function inicjuj(){
     for(var i=0; i<10; i++){
         for(var j=0; j<10; j++){
             nr = 10*i+j+1;
-            html += '<div id"' +nr+ '" class="pole" onclick="rysuj(' +nr+ ');">' +nr+ '</div>';
+            html += '<div id="' +nr+ '" class="pole" onclick="rysuj(' +nr+ ');">' +nr+ '</div>';
 
             if(j==9)
                 html += '<div style="clear: both;"></div>';
