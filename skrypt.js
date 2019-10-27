@@ -41,10 +41,16 @@ function zmienKolor(event){
 
 function rysuj(nr){
     console.log(nr);
+
     var wybranyDiv = document.getElementById(nr);
-    var att = document.createAttribute('style');
-    att.value = 'background-color: red';
-    wybranyDiv.setAttributeNode(att);
+
+    if(wybranyDiv.hasAttribute("style")){
+        console.log('ma styl');
+    } else {
+        var att = document.createAttribute('style');
+        att.value = 'background-color: red';
+        wybranyDiv.setAttributeNode(att);
+    }    
 }
 
 function inicjuj(){
