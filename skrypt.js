@@ -41,15 +41,50 @@ function zmienKolor(event){
 
 function rysuj(nr){
     // console.log(nr);
+    var color;
+    switch(kolor){
+        case 'biały':
+            color = 'white';
+            break;
+        case 'czarny':
+            color = 'black';
+            break;
+        case 'czerwony':
+            color = 'red';
+            break;
+        case 'zielony':
+            color = 'green';
+            break;
+        case 'niebieski':
+            color = 'blue';
+            break;
+        case 'żółty':
+            color = 'yellow';
+            break;
+        case 'fuchsia':
+            color = 'fuchsia';
+            break;
+        case 'pomarańczowy':
+            color = 'orange';
+            break;
+        case 'brązowy':
+            color = 'brown';
+            break;
+        case 'szary':
+            color = 'grey';
+            break;
+    }
 
     var wybranyDiv = document.getElementById(nr);
 
     if(wybranyDiv.hasAttribute("style")){
         // console.log('ma styl');
-        wybranyDiv.setAttribute("style", "background-color: blue");
+        // wybranyDiv.setAttribute("style", "background-color: blue");
+        wybranyDiv.setAttribute("style", "background-color: "+color);
     } else {
         var att = document.createAttribute('style');
-        att.value = 'background-color: red';
+        // att.value = 'background-color: red';
+        att.value = 'background-color: '+color;
         wybranyDiv.setAttributeNode(att);
     }
 }
